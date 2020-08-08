@@ -13,6 +13,8 @@ dependencies:
 
   flutter_i18n:
   get:
+  shared_preferences:
+  dio:
 
   cupertino_icons: ^0.1.3
 
