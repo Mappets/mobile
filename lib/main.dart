@@ -35,7 +35,10 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        supportedLocales: [Locale("pt"), Locale("en")],
+        supportedLocales: [
+          Locale(LanguageConstants.BRAZILIAN_PORTUGUESE),
+          Locale(LanguageConstants.AMERICAN_ENGLISH)
+        ],
         localizationsDelegates: [
           flutterI18nDelegate,
           GlobalMaterialLocalizations.delegate,
