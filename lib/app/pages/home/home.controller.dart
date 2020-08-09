@@ -1,3 +1,3 @@
 import 'package:get/get.dart';
 
-class Controller extends GetxController {}
+class HomeController extends GetxController {}
