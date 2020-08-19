@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_i18n/flutter_i18n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
-import 'package:mobile/app/pages/home/home.page.dart';
 
 import 'app/constants/app.constants.dart';
 import 'app/constants/language.constants.dart';
@@ -37,7 +36,7 @@ Future<void> main() async {
       GlobalWidgetsLocalizations.delegate
     ],
     builder: FlutterI18n.rootAppBuilder(),
-    initialRoute: RouteConstants.HOME,
+    initialRoute: RouteConstants.MAP,
     getPages: appRoutes,
   ));
 }
