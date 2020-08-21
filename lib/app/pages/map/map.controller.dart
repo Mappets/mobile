@@ -7,11 +7,15 @@ class MapController extends GetxController {
 
   @override
   Future<void> onInit() async {
+    _loadCurrentPosition();
+    super.onInit();
+  }
+
+  Future<void> _loadCurrentPosition() async {
     Position _currentPosition = await Geolocator()
         .getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
 
     coordinates.value =
         LatLng(_currentPosition.latitude, _currentPosition.longitude);
-    super.onInit();
   }
 }
