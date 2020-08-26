@@ -23,7 +23,7 @@ Future<void> main() async {
     debugShowCheckedModeBanner: false,
     title: AppConstants.NAME,
     theme: ThemeData(
-      primarySwatch: Colors.blue,
+      primaryColor: Color(0xFF42B883),
       visualDensity: VisualDensity.adaptivePlatformDensity,
     ),
     supportedLocales: [

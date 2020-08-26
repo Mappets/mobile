@@ -9,7 +9,13 @@ class MapPage extends StatelessWidget {
 
   @override
   Widget build(context) => Scaffold(
-      appBar: AppBar(title: Text("Map")),
+      appBar: AppBar(
+          centerTitle: true,
+          title: Image.asset(
+            "assets/images/brand-white.png",
+            width: 150,
+          ),
+          brightness: Brightness.dark),
       body: SizedBox(
         height: MediaQuery.of(context).size.height * 0.8,
         width: MediaQuery.of(context).size.width,

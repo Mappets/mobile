@@ -1,5 +1,5 @@
 name: mobile
-description: A new Flutter project.
+description: Mappets is an open collaborative project to help animals.
 
 publish_to: "none"
 version: 1.0.0+1
@@ -11,20 +11,27 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_launcher_icons:
   flutter_i18n:
   get:
   shared_preferences:
   dio:
   google_maps_flutter:
   geolocator:
-
-  cupertino_icons: ^0.1.3
+  cupertino_icons:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+flutter_icons:
+  android: true
+  image_path_android: "assets/images/logo-colored-android.jpg"
+  ios: true
+  image_path_ios: "assets/images/logo-colored-ios.jpg"
+
 flutter:
   uses-material-design: true
   assets:
     - assets/locales/
+    - assets/images/
