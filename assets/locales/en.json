@@ -1,4 +1,9 @@
 {
   "NEW_PET_LABEL": "New pet",
-  "NEW_ORGANIZATION_LABEL": "New organization"
+  "NEW_ORGANIZATION_LABEL": "New organization",
+  "PROFILE": "Profile",
+  "REGISTER": "Register",
+  "SIGN_IN": "Sign in",
+  "SIGN_UP": "Sign up",
+  "NEED_SIGNIN_MESSAGE": "To access your profile, you need to sign in."
 }
