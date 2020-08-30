@@ -5,5 +5,10 @@
   "REGISTER": "Cadastrar",
   "SIGN_IN": "Entrar",
   "SIGN_UP": "Cadastrar",
-  "NEED_SIGNIN_MESSAGE": "Para acessar seu perfil, você precisa logar."
+  "NEED_SIGNIN_MESSAGE": "Para acessar seu perfil, você precisa logar.",
+  "ADDRESS": "Endereço",
+  "NAME": "Nome",
+  "BIRTH_DATE": "Data de nascimento",
+  "PASSWORD": "Senha",
+  "COUNTRY": "País"
 }

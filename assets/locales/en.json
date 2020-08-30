@@ -5,5 +5,10 @@
   "REGISTER": "Register",
   "SIGN_IN": "Sign in",
   "SIGN_UP": "Sign up",
-  "NEED_SIGNIN_MESSAGE": "To access your profile, you need to sign in."
+  "NEED_SIGNIN_MESSAGE": "To access your profile, you need to sign in.",
+  "ADDRESS": "Address",
+  "NAME": "Name",
+  "BIRTH_DATE": "Birth date",
+  "PASSWORD": "Password",
+  "COUNTRY": "Country"
 }

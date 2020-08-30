@@ -32,7 +32,8 @@ class ProfilePage extends StatelessWidget {
           children: [
             TitleWidget(title: "PROFILE"),
             DividerWidget(),
-            _registerContent(context)
+            _profileContent(context),
+            // _registerContent(context)
           ],
         ),
       );
@@ -76,4 +77,73 @@ class ProfilePage extends StatelessWidget {
           onPressed: onPressed,
         ),
       );
+
+  Widget _profileContent(BuildContext context) => Form(
+      key: controller.profileFormKey,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _nameInput(context),
+          _birthDateInput(context),
+          _passwordInput(context),
+          Padding(
+            padding: EdgeInsets.only(top: 42),
+            child: TitleWidget(title: "ADDRESS"),
+          ),
+          DividerWidget(),
+          _addressInput(context),
+          _countryInput(context),
+        ],
+      ));
+
+  Widget _nameInput(BuildContext context) => Padding(
+        padding: EdgeInsets.only(top: 42),
+        child: TextFormField(
+          controller: controller.nameController,
+          keyboardType: TextInputType.text,
+          decoration: InputDecoration(
+            labelText: FlutterI18n.translate(context, "NAME"),
+          ),
+        ),
+      );
+
+  Widget _birthDateInput(BuildContext context) => Padding(
+        padding: EdgeInsets.only(top: 14),
+        child: TextFormField(
+          controller: controller.birthDateController,
+          keyboardType: TextInputType.datetime,
+          decoration: InputDecoration(
+            labelText: FlutterI18n.translate(context, "BIRTH_DATE"),
+          ),
+        ),
+      );
+
+  Widget _passwordInput(BuildContext context) => Padding(
+        padding: EdgeInsets.only(top: 14),
+        child: TextFormField(
+          controller: controller.passwordController,
+          obscureText: true,
+          decoration: InputDecoration(
+            labelText: FlutterI18n.translate(context, "PASSWORD"),
+          ),
+        ),
+      );
+
+  Widget _addressInput(BuildContext context) => Padding(
+      padding: EdgeInsets.only(top: 42),
+      child: TextFormField(
+        controller: controller.addressController,
+        decoration: InputDecoration(
+          labelText: FlutterI18n.translate(context, "ADDRESS"),
+        ),
+      ));
+
+  Widget _countryInput(BuildContext context) => Padding(
+      padding: EdgeInsets.only(top: 14),
+      child: TextFormField(
+        controller: controller.countryController,
+        decoration: InputDecoration(
+          labelText: FlutterI18n.translate(context, "COUNTRY"),
+        ),
+      ));
 }
