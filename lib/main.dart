@@ -24,6 +24,7 @@ Future<void> main() async {
     title: AppConstants.NAME,
     theme: ThemeData(
       primaryColor: Color(0xFF42B883),
+      accentColor: Colors.white,
       visualDensity: VisualDensity.adaptivePlatformDensity,
     ),
     supportedLocales: [
