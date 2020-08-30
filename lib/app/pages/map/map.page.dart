@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:mobile/app/widgets/bottom_navigation_bar/bottom_navigation_bar.widget.dart';
+import 'package:mobile/app/widgets/popup_menu_button/popup_menu_button.widget.dart';
 
 import 'map.controller.dart';
 
@@ -17,7 +19,7 @@ class MapPage extends StatelessWidget {
             ),
             brightness: Brightness.dark),
         body: SizedBox(
-          height: MediaQuery.of(context).size.height * 0.78,
+          height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: Center(
             child: Obx(() => controller.coordinates.value != null
@@ -27,43 +29,12 @@ class MapPage extends StatelessWidget {
                       target: controller.coordinates.value,
                       zoom: 17,
                     ),
-                    onMapCreated: (controller) => print(controller))
+                  )
                 : Container()),
           ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButton(
-          tooltip: 'Create',
-          elevation: 2.0,
-          backgroundColor: Theme.of(context).primaryColor,
-          child: Icon(Icons.pets, color: Theme.of(context).accentColor),
-          onPressed: () {},
-        ),
-        bottomNavigationBar: BottomAppBar(
-          shape: CircularNotchedRectangle(),
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Container(
-                width: MediaQuery.of(context).size.width * 0.4,
-                child: IconButton(
-                  icon: Icon(Icons.home, size: 30),
-                  color: Theme.of(context).accentColor,
-                  onPressed: () {},
-                ),
-              ),
-              Container(
-                width: MediaQuery.of(context).size.width * 0.4,
-                child: IconButton(
-                  icon: Icon(Icons.person, size: 30),
-                  color: Theme.of(context).accentColor,
-                  onPressed: () {},
-                ),
-              ),
-            ],
-          ),
-          color: Theme.of(context).primaryColor,
-        ),
+        floatingActionButton: PopupMenuButtonWidget(),
+        bottomNavigationBar: BottomNavigationBarWidget(),
       );
 }
