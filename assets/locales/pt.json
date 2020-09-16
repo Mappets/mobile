@@ -10,5 +10,6 @@
   "NAME": "Nome",
   "BIRTH_DATE": "Data de nascimento",
   "PASSWORD": "Senha",
-  "COUNTRY": "País"
+  "COUNTRY": "País",
+  "REQUIRED_FIELD": "Campo obrigatório"
 }

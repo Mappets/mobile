@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:mobile/app/providers/rest_api.constants.dart';
+import 'package:mobile/app/constants/rest_api.constants.dart';
 
 class RestAPIProvider {
   static RestAPIProvider instance;
