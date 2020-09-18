@@ -1,8 +1,9 @@
 import 'package:get/get.dart';
 import 'package:mobile/app/constants/route.constants.dart';
-import 'package:mobile/app/pages/login/login.page.dart';
+import 'package:mobile/app/pages/disconnected/disconnected.page.dart';
 import 'package:mobile/app/pages/map/map.page.dart';
 import 'package:mobile/app/pages/profile/profile.page.dart';
+import 'package:mobile/app/pages/register/register.page.dart';
 
 List<GetPage> appRoutes = [
   GetPage(
@@ -10,8 +11,12 @@ List<GetPage> appRoutes = [
     page: () => MapPage(),
   ),
   GetPage(
-    name: RouteConstants.LOGIN,
-    page: () => LoginPage(),
+    name: RouteConstants.DISCONNECTED,
+    page: () => DisconnectedPage(),
+  ),
+  GetPage(
+    name: RouteConstants.REGISTER,
+    page: () => RegisterPage(),
   ),
   GetPage(
     name: RouteConstants.PROFILE,

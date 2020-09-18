@@ -23,7 +23,7 @@ class BottomNavigationBarWidget extends StatelessWidget {
               child: IconButton(
                 icon: Icon(Icons.person, size: 30),
                 color: Theme.of(context).accentColor,
-                onPressed: () => Get.offAllNamed(RouteConstants.LOGIN),
+                onPressed: () => Get.offAllNamed(RouteConstants.DISCONNECTED),
               ),
             ),
           ],

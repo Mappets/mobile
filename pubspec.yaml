@@ -19,6 +19,7 @@ dependencies:
   google_maps_flutter:
   geolocator:
   cupertino_icons:
+  flutter_masked_text:
 
 dev_dependencies:
   flutter_test:

@@ -5,10 +5,10 @@ import 'package:mobile/app/widgets/bottom_navigation_bar/bottom_navigation_bar.w
 import 'package:mobile/app/widgets/divider/divider.widget.dart';
 import 'package:mobile/app/widgets/title/title.widget.dart';
 
-import 'profile.controller.dart';
+import 'register.controller.dart';
 
-class ProfilePage extends StatelessWidget {
-  final ProfileController controller = Get.put(ProfileController());
+class RegisterPage extends StatelessWidget {
+  final RegisterController controller = Get.put(RegisterController());
 
   @override
   Widget build(context) => Scaffold(
@@ -24,7 +24,7 @@ class ProfilePage extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.save, color: Theme.of(context).accentColor),
           backgroundColor: Theme.of(context).primaryColor,
-          onPressed: () {},
+          onPressed: controller.register,
         ),
         bottomNavigationBar: BottomNavigationBarWidget(),
       );
@@ -33,33 +33,28 @@ class ProfilePage extends StatelessWidget {
         padding: EdgeInsets.all(48),
         child: ListView(
           children: [
-            TitleWidget(title: "PROFILE"),
+            TitleWidget(title: "REGISTER"),
             DividerWidget(),
-            _profileContent(context),
+            _registerForm(context),
           ],
         ),
       );
 
-  Widget _profileContent(BuildContext context) => Form(
+  Widget _registerForm(BuildContext context) => Form(
       key: controller.profileFormKey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _nameInput(context),
-          _birthDateInput(context),
+          _emailInput(context),
+          _phoneInput(context),
           _passwordInput(context),
-          Padding(
-            padding: EdgeInsets.only(top: 42),
-            child: TitleWidget(title: "ADDRESS"),
-          ),
-          DividerWidget(),
-          _addressInput(context),
-          _countryInput(context),
+          _confirmPasswordInput(context),
         ],
       ));
 
   Widget _nameInput(BuildContext context) => Padding(
-        padding: EdgeInsets.only(top: 42),
+        padding: EdgeInsets.only(top: 14),
         child: TextFormField(
           controller: controller.nameController,
           keyboardType: TextInputType.text,
@@ -75,13 +70,33 @@ class ProfilePage extends StatelessWidget {
         ),
       );
 
-  Widget _birthDateInput(BuildContext context) => Padding(
+  Widget _emailInput(BuildContext context) => Padding(
         padding: EdgeInsets.only(top: 14),
         child: TextFormField(
-          controller: controller.birthDateController,
-          keyboardType: TextInputType.datetime,
+          controller: controller.emailController,
+          keyboardType: TextInputType.emailAddress,
           decoration: InputDecoration(
-            labelText: FlutterI18n.translate(context, "BIRTH_DATE"),
+            labelText: FlutterI18n.translate(context, "EMAIL"),
+          ),
+          validator: (value) {
+            if (value.isEmpty)
+              return FlutterI18n.translate(context, "REQUIRED_FIELD");
+
+            if (!value.isEmail)
+              return FlutterI18n.translate(context, "INVALID_EMAIL");
+
+            return null;
+          },
+        ),
+      );
+
+  Widget _phoneInput(BuildContext context) => Padding(
+        padding: EdgeInsets.only(top: 14),
+        child: TextFormField(
+          controller: controller.phoneController,
+          keyboardType: TextInputType.phone,
+          decoration: InputDecoration(
+            labelText: FlutterI18n.translate(context, "PHONE"),
           ),
           validator: (value) {
             if (value.isEmpty)
@@ -104,38 +119,31 @@ class ProfilePage extends StatelessWidget {
             if (value.isEmpty)
               return FlutterI18n.translate(context, "REQUIRED_FIELD");
 
+            if (value != controller.confirmPasswordController.text)
+              return FlutterI18n.translate(context, "DIFFERENT_PASSWORDS");
+
             return null;
           },
         ),
       );
 
-  Widget _addressInput(BuildContext context) => Padding(
-      padding: EdgeInsets.only(top: 42),
-      child: TextFormField(
-        controller: controller.addressController,
-        decoration: InputDecoration(
-          labelText: FlutterI18n.translate(context, "ADDRESS"),
+  Widget _confirmPasswordInput(BuildContext context) => Padding(
+        padding: EdgeInsets.only(top: 14),
+        child: TextFormField(
+          controller: controller.confirmPasswordController,
+          obscureText: true,
+          decoration: InputDecoration(
+            labelText: FlutterI18n.translate(context, "CONFIRM_PASSWORD"),
+          ),
+          validator: (value) {
+            if (value.isEmpty)
+              return FlutterI18n.translate(context, "REQUIRED_FIELD");
+
+            if (value != controller.passwordController.text)
+              return FlutterI18n.translate(context, "DIFFERENT_PASSWORDS");
+
+            return null;
+          },
         ),
-        validator: (value) {
-          if (value.isEmpty)
-            return FlutterI18n.translate(context, "REQUIRED_FIELD");
-
-          return null;
-        },
-      ));
-
-  Widget _countryInput(BuildContext context) => Padding(
-      padding: EdgeInsets.only(top: 14),
-      child: TextFormField(
-        controller: controller.countryController,
-        decoration: InputDecoration(
-          labelText: FlutterI18n.translate(context, "COUNTRY"),
-        ),
-        validator: (value) {
-          if (value.isEmpty)
-            return FlutterI18n.translate(context, "REQUIRED_FIELD");
-
-          return null;
-        },
-      ));
+      );
 }

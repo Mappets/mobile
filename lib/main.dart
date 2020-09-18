@@ -52,7 +52,7 @@ Future<void> main() async {
       GlobalWidgetsLocalizations.delegate
     ],
     builder: FlutterI18n.rootAppBuilder(),
-    initialRoute: RouteConstants.LOGIN,
+    initialRoute: RouteConstants.DISCONNECTED,
     getPages: appRoutes,
   ));
 }

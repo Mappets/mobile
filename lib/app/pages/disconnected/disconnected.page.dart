@@ -7,10 +7,10 @@ import 'package:mobile/app/widgets/divider/divider.widget.dart';
 import 'package:mobile/app/widgets/popup_menu_button/popup_menu_button.widget.dart';
 import 'package:mobile/app/widgets/title/title.widget.dart';
 
-import 'login.controller.dart';
+import 'disconnected.controller.dart';
 
-class LoginPage extends StatelessWidget {
-  final LoginController controller = Get.put(LoginController());
+class DisconnectedPage extends StatelessWidget {
+  final DisconnectedController controller = Get.put(DisconnectedController());
 
   @override
   Widget build(context) => Scaffold(
@@ -54,7 +54,7 @@ class LoginPage extends StatelessWidget {
           ),
           DividerWidget(),
           _actionButton(context, "SIGN_UP",
-              () => Get.offAllNamed(RouteConstants.PROFILE)),
+              () => Get.offAllNamed(RouteConstants.REGISTER)),
           Padding(
             padding: EdgeInsets.only(top: 69),
             child: TitleWidget(title: "SIGN_IN"),

@@ -14,7 +14,8 @@ class RestAPIProvider {
     return instance;
   }
 
-  Future<dynamic> authenticate() => dio.get("");
+  Future<Response<dynamic>> register(Map<String, dynamic> data) =>
+      dio.post(RestAPIConstants.REGISTER_ENDPOINT, data: data);
 
   void setToken(String token) => bearerToken = token;
 }

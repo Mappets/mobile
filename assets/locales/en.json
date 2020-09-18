@@ -8,8 +8,13 @@
   "NEED_SIGNIN_MESSAGE": "To access your profile, you need to sign in.",
   "ADDRESS": "Address",
   "NAME": "Name",
+  "EMAIL": "E-mail",
+  "PHONE": "Phone",
   "BIRTH_DATE": "Birth date",
   "PASSWORD": "Password",
+  "CONFIRM_PASSWORD": "Confirm password",
   "COUNTRY": "Country",
-  "REQUIRED_FIELD": "Required field"
+  "REQUIRED_FIELD": "Required field",
+  "INVALID_EMAIL": "Invalid email.",
+  "DIFFERENT_PASSWORDS": "Different passwords"
 }

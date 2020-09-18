@@ -8,8 +8,13 @@
   "NEED_SIGNIN_MESSAGE": "Para acessar seu perfil, você precisa logar.",
   "ADDRESS": "Endereço",
   "NAME": "Nome",
+  "EMAIL": "E-mail",
+  "PHONE": "Celular",
   "BIRTH_DATE": "Data de nascimento",
   "PASSWORD": "Senha",
+  "CONFIRM_PASSWORD": "Confirmar senha",
   "COUNTRY": "País",
-  "REQUIRED_FIELD": "Campo obrigatório"
+  "REQUIRED_FIELD": "Campo obrigatório",
+  "INVALID_EMAIL": "E-mail inválido",
+  "DIFFERENT_PASSWORDS": "Senhas diferentes"
 }
