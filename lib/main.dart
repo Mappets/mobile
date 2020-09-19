@@ -38,10 +38,11 @@ Future<void> main() async {
     debugShowCheckedModeBanner: false,
     title: AppConstants.NAME,
     theme: ThemeData(
-      primaryColor: Color(0xFF42B883),
-      accentColor: Colors.white,
-      visualDensity: VisualDensity.adaptivePlatformDensity,
-    ),
+        primaryColor: Color(0xFF42B883),
+        accentColor: Colors.white,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        appBarTheme:
+            AppBarTheme(iconTheme: IconThemeData(color: Colors.white))),
     supportedLocales: [
       Locale(LanguageConstants.BRAZILIAN_PORTUGUESE),
       Locale(LanguageConstants.AMERICAN_ENGLISH)
@@ -52,7 +53,7 @@ Future<void> main() async {
       GlobalWidgetsLocalizations.delegate
     ],
     builder: FlutterI18n.rootAppBuilder(),
-    initialRoute: RouteConstants.DISCONNECTED,
+    initialRoute: RouteConstants.MAP,
     getPages: appRoutes,
   ));
 }

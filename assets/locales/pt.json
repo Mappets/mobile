@@ -16,5 +16,6 @@
   "COUNTRY": "País",
   "REQUIRED_FIELD": "Campo obrigatório",
   "INVALID_EMAIL": "E-mail inválido",
-  "DIFFERENT_PASSWORDS": "Senhas diferentes"
+  "DIFFERENT_PASSWORDS": "Senhas diferentes",
+  "LOADING": "Carregando"
 }

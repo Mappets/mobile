@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mobile/app/constants/route.constants.dart';
+import 'package:mobile/app/widgets/bottom_navigation_bar/bottom_navigation_bar.controller.dart';
 
 class BottomNavigationBarWidget extends StatelessWidget {
+  final BottomNavigationBarController controller =
+      Get.put(BottomNavigationBarController());
+
   @override
   Widget build(BuildContext context) => BottomAppBar(
         shape: CircularNotchedRectangle(),
@@ -23,7 +27,9 @@ class BottomNavigationBarWidget extends StatelessWidget {
               child: IconButton(
                 icon: Icon(Icons.person, size: 30),
                 color: Theme.of(context).accentColor,
-                onPressed: () => Get.offAllNamed(RouteConstants.DISCONNECTED),
+                onPressed: () => Get.offAllNamed(controller.user.value != null
+                    ? RouteConstants.PROFILE
+                    : RouteConstants.DISCONNECTED),
               ),
             ),
           ],

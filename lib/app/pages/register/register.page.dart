@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_i18n/flutter_i18n.dart';
 import 'package:get/get.dart';
 import 'package:mobile/app/widgets/bottom_navigation_bar/bottom_navigation_bar.widget.dart';
@@ -11,7 +12,8 @@ class RegisterPage extends StatelessWidget {
   final RegisterController controller = Get.put(RegisterController());
 
   @override
-  Widget build(context) => Scaffold(
+  Widget build(context) => FlutterEasyLoading(
+          child: Scaffold(
         appBar: AppBar(
             centerTitle: true,
             title: Image.asset(
@@ -24,10 +26,10 @@ class RegisterPage extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.save, color: Theme.of(context).accentColor),
           backgroundColor: Theme.of(context).primaryColor,
-          onPressed: controller.register,
+          onPressed: () => controller.register(context),
         ),
         bottomNavigationBar: BottomNavigationBarWidget(),
-      );
+      ));
 
   Widget _body(BuildContext context) => Padding(
         padding: EdgeInsets.all(48),

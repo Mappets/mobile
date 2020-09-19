@@ -60,7 +60,8 @@ class DisconnectedPage extends StatelessWidget {
             child: TitleWidget(title: "SIGN_IN"),
           ),
           DividerWidget(),
-          _actionButton(context, "SIGN_IN", () {})
+          _actionButton(
+              context, "SIGN_IN", () => Get.offAllNamed(RouteConstants.LOGIN))
         ],
       );
 
