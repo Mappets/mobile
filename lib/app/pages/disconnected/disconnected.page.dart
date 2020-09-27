@@ -28,7 +28,7 @@ class DisconnectedPage extends StatelessWidget {
       );
 
   Widget _body(BuildContext context) => Padding(
-        padding: EdgeInsets.all(48),
+        padding: EdgeInsets.fromLTRB(48, 48, 48, 0),
         child: ListView(
           children: [
             TitleWidget(title: "PROFILE"),
@@ -53,15 +53,15 @@ class DisconnectedPage extends StatelessWidget {
             child: TitleWidget(title: "REGISTER"),
           ),
           DividerWidget(),
-          _actionButton(context, "SIGN_UP",
-              () => Get.offAllNamed(RouteConstants.REGISTER)),
+          _actionButton(
+              context, "SIGN_UP", () => Get.toNamed(RouteConstants.REGISTER)),
           Padding(
             padding: EdgeInsets.only(top: 69),
             child: TitleWidget(title: "SIGN_IN"),
           ),
           DividerWidget(),
           _actionButton(
-              context, "SIGN_IN", () => Get.offAllNamed(RouteConstants.LOGIN))
+              context, "SIGN_IN", () => Get.toNamed(RouteConstants.LOGIN))
         ],
       );
 

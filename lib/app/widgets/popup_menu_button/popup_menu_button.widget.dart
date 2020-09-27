@@ -30,5 +30,6 @@ class PopupMenuButtonWidget extends StatelessWidget {
                     color: Theme.of(context).accentColor),
               ))
           .toList(),
-      color: Theme.of(context).primaryColor);
+      color: Theme.of(context).primaryColor,
+      onSelected: controller.onSelectPopupMenuOption);
 }

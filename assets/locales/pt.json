@@ -17,5 +17,8 @@
   "REQUIRED_FIELD": "Campo obrigatório",
   "INVALID_EMAIL": "E-mail inválido",
   "DIFFERENT_PASSWORDS": "Senhas diferentes",
-  "LOADING": "Carregando"
+  "LOADING": "Carregando",
+  "AGE": "Idade",
+  "GENDER": "Gênero",
+  "NEW_PET": "Novo pet"
 }

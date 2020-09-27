@@ -17,5 +17,8 @@
   "REQUIRED_FIELD": "Required field",
   "INVALID_EMAIL": "Invalid email.",
   "DIFFERENT_PASSWORDS": "Different passwords",
-  "LOADING": "Loading"
+  "LOADING": "Loading",
+  "AGE": "Age",
+  "GENDER": "Gender",
+  "NEW_PET": "New pet"
 }

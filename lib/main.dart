@@ -53,7 +53,7 @@ Future<void> main() async {
       GlobalWidgetsLocalizations.delegate
     ],
     builder: FlutterI18n.rootAppBuilder(),
-    initialRoute: RouteConstants.MAP,
+    initialRoute: RouteConstants.EDIT_PET,
     getPages: appRoutes,
   ));
 }
