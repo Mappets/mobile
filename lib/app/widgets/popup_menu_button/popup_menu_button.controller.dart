@@ -9,7 +9,7 @@ class PopupMenuButtonController extends GetxController {
     },
     {
       "label": "NEW_ORGANIZATION_LABEL",
-      "action": () => Get.toNamed(RouteConstants.EDIT_PET)
+      "action": () => Get.toNamed(RouteConstants.EDIT_ORGANIZATION)
     },
   ];
 
