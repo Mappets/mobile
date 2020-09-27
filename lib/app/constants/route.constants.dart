@@ -5,4 +5,5 @@ class RouteConstants {
   static const String REGISTER = "/register";
   static const String PROFILE = "/profile";
   static const String EDIT_PET = "/edit-pet";
+  static const String EDIT_ORGANIZATION = "/edit-organization";
 }

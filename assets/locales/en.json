@@ -20,5 +20,7 @@
   "LOADING": "Loading",
   "AGE": "Age",
   "GENDER": "Gender",
-  "NEW_PET": "New pet"
+  "NEW_PET": "New pet",
+  "NEW_ORGANIZATION": "New organization",
+  "TYPE": "Type"
 }

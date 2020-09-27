@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:mobile/app/constants/route.constants.dart';
 import 'package:mobile/app/pages/disconnected/disconnected.page.dart';
+import 'package:mobile/app/pages/edit_organization/edit_organization.page.dart';
 import 'package:mobile/app/pages/edit_pet/edit_pet.page.dart';
 import 'package:mobile/app/pages/login/login.page.dart';
 import 'package:mobile/app/pages/map/map.page.dart';
@@ -31,5 +32,9 @@ List<GetPage> appRoutes = [
   GetPage(
     name: RouteConstants.EDIT_PET,
     page: () => EditPetPage(),
+  ),
+  GetPage(
+    name: RouteConstants.EDIT_ORGANIZATION,
+    page: () => EditOrganizationPage(),
   ),
 ];
