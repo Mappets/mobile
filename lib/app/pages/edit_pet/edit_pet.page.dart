@@ -53,6 +53,7 @@ class EditPetPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          _petImage(context),
           _nameInput(context),
           _ageInput(context),
           _genderInput(context),
@@ -64,6 +65,44 @@ class EditPetPage extends StatelessWidget {
           _countryInput(context),
         ],
       ));
+
+  Widget _petImage(BuildContext context) => Padding(
+        padding: EdgeInsets.only(top: 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GestureDetector(
+              child: Container(
+                padding: EdgeInsets.all(25),
+                height: 150,
+                width: 150,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).accentColor,
+                  borderRadius: BorderRadius.all(Radius.circular(75)),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: Offset(0, 3), // changes position of shadow
+                    ),
+                  ],
+                ),
+                child: controller.petImage != null
+                    ? Container()
+                    : Container(
+                        child: Icon(
+                          Icons.camera_alt,
+                          size: 100,
+                          color: Theme.of(context).primaryColor,
+                        ),
+                      ),
+              ),
+              onTap: () => controller.openCamera(context),
+            )
+          ],
+        ),
+      );
 
   Widget _nameInput(BuildContext context) => Padding(
         padding: EdgeInsets.only(top: 14),

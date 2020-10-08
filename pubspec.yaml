@@ -21,6 +21,7 @@ dependencies:
   cupertino_icons:
   flutter_masked_text:
   flutter_easyloading:
+  camera_camera:
 
 dev_dependencies:
   flutter_test:
